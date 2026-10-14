@@ -1,0 +1,11 @@
+version: '3,8'
+services:
+    mi-aplicacion:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: api-flores-prueba
+      ports:
+      - "8000:80"
+      volumes:
+       - ./database:/var/www/database
